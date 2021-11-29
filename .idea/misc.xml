@@ -3,18 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Dev/androidWork/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Dev/androidWork/mylayout/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Dev/androidWork/mypet/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/active_calc.xml" value="0.33" />
-        <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/tjrwl/StudioProjects/android/mylayout/src/main/res/layout/activity_main.xml" value="0.2046875" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/build/classes" />
-  </component>
-  <component name="ProjectType">
-    <option name="id" value="Android" />
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

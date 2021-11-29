@@ -29,19 +29,18 @@ public class MainActivity extends AppCompatActivity {
 //            Toast.makeText(this, "클릭되버림", Toast.LENGTH_SHORT).show();
             //클릭한 버튼의 text(숫자값)을 읽어서 startNum과 같다면
             if(Integer.parseInt(((Button)v).getText().toString()) == startNum){
+                ((Button)v).setText("");
                 startNum++;
-
-
             }
-                //startNum++
-                //버튼의 text reset
-            Toast.makeText(this, "게임완료", Toast.LENGTH_LONG).show();
+            if(startNum == 17) {
+                Toast.makeText(this, "게임완료", Toast.LENGTH_LONG).show();
+            }
         };
 
         // 1차원배열 16개의 임의의 순서로
         List<Integer> list = Arrays.asList(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16);
         Collections.shuffle(list);
-
+        Button startB = new Button(this);
         for(int i : list) {
             Button btn = new Button(this);
             btn.setText(String.valueOf(i));
