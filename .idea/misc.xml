@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Dev/androidWork/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Dev/androidWork/mylayout/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Dev/androidWork/mypet/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/active_calc.xml" value="0.33" />
+        <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>
