@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
             btn.setOnClickListener(handler);
         }
         Button startBtn = new Button(this);
-        startBtn.setText("게임시작");
+        startBtn.setText("RESET");
         linear.addView(startBtn);
 
         startBtn.setOnClickListener(v -> {

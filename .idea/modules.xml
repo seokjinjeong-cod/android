@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/My_First.iml" filepath="$PROJECT_DIR$/.idea/modules/My_First.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/My_First.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/My_First.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mylayout/My_First.mylayout.iml" filepath="$PROJECT_DIR$/.idea/modules/mylayout/My_First.mylayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mymemo/My_First.mymemo.iml" filepath="$PROJECT_DIR$/.idea/modules/mymemo/My_First.mymemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mypet/My_First.mypet.iml" filepath="$PROJECT_DIR$/.idea/modules/mypet/My_First.mypet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mywidget/My_First.mywidget.iml" filepath="$PROJECT_DIR$/.idea/modules/mywidget/My_First.mywidget.iml" />
+    </modules>
+  </component>
+</project>
