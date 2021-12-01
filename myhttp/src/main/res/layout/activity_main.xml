@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+    android:ems="10"
+    android:gravity="start|top"
+    android:id="@+id/txtResult"
+    android:inputType="textMultiLine"
+    android:layout_height="420dp"
+    android:layout_marginTop="24dp"
+    android:layout_width="322dp"
+    app:layout_constraintTop_toBottomOf="@+id/btnDel"
+    tools:layout_editor_absoluteX="25dp" />
+
+    <Button
+    android:id="@+id/btnUpd"
+    android:layout_height="45dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginTop="12dp"
+    android:layout_width="78dp"
+    android:text="수정"
+    app:layout_constraintStart_toEndOf="@+id/btnoSel"
+    app:layout_constraintTop_toBottomOf="@+id/txtPw" />
+
+    <Button
+        android:id="@+id/btnIns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="등록"
+        app:layout_constraintTop_toBottomOf="@+id/txtPw"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="76dp"
+        android:ems="10"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/txtId"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <EditText
+        android:id="@+id/txtPw"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/txtId"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <Button
+    android:id="@+id/btnDel"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="12dp"
+    android:layout_width="wrap_content"
+    android:text="삭제"
+    app:layout_constraintStart_toEndOf="@+id/btnIns"
+    app:layout_constraintTop_toBottomOf="@+id/txtPw" />
+
+    <Button
+    android:id="@+id/btnoSel"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="12dp"
+    android:layout_width="wrap_content"
+    android:text="단건조회"
+    app:layout_constraintStart_toEndOf="@+id/btnDel"
+    app:layout_constraintTop_toBottomOf="@+id/txtPw" />
+
+    <EditText
+        android:id="@+id/txtId"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="44dp" />
+
+    <EditText
+        android:id="@+id/txtRole"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="역할"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/txtId"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

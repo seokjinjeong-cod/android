@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:text="전화 걸기"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="172dp"
+        android:text="문자 보내기"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="229dp"
+        android:text="사진 찍기"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="288dp"
+        android:text="라이프사이클"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="9dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:text="홈 페이지 열기"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="59dp"
+        android:text="구글 맵 열기"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="6dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="399dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="116dp"
+        android:text="구글 검색하기"
+        app:layout_constraintTop_toBottomOf="@+id/button1"
+        tools:layout_editor_absoluteX="6dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
