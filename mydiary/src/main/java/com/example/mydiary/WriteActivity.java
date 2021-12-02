@@ -59,8 +59,6 @@ public class WriteActivity extends AppCompatActivity {
                 setResult(2, intent1);
             }
             finish();
-
-
         });
     }
 }

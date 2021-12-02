@@ -39,7 +39,6 @@ public class ListActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "등록되었습니다.", Toast.LENGTH_LONG).show();
         } else if(resultCode == 2) {
             Toast.makeText(getApplicationContext(), "수정되었습니다.", Toast.LENGTH_LONG).show();
-
         }
     }
 }

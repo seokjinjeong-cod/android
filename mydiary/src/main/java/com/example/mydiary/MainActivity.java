@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         DBHelper dbHelper = new DBHelper(getApplicationContext());
         list = DiaryDAO.selectAll(dbHelper);
 
-
         lv.setAdapter(new MyAdapter(list));
 
         btnWriteForm.setOnClickListener(v -> {

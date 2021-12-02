@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -31,21 +32,28 @@ public class MainActivity extends AppCompatActivity {
         dp.init(2021,12,2,(datePicker, i, i1, i2) -> {
             //년월일로 파일명을 만들고
             String fname = String.valueOf(i)
-                    + ( (i1+1<10) ? "0"+i1+1 : i1+1 )
+
+                    + ( (i1<10) ? "0"+(i1+1) : i1+1 )
                     + ( (i2<10) ? "0"+i2 : i2 ) + ".txt";
-            //파일을 읽어서 editview에 보이도록 함.
-            //없으면 toast로 없다고 출력
+
             fileRead(fname);
         });
 
         btnWrite.setOnClickListener(v -> {
             try {
-                String fname = String.valueOf(dp.getYear()) + String.valueOf(dp.getMonth()+1) + String.valueOf(dp.getDayOfMonth()) + ".txt";
+                String dayOfMonth = "";
+                String month = "";
+                if(dp.getDayOfMonth() < 10) { dayOfMonth = "0" + String.valueOf(dp.getDayOfMonth()); }
+                else { dayOfMonth = String.valueOf(dp.getDayOfMonth()); }
+                if(dp.getMonth() < 10) { month = "0" + String.valueOf(dp.getMonth() + 1); }
+                else { month = String.valueOf(dp.getMonth() + 1); }
+                String fname = String.valueOf(dp.getYear()) + month + dayOfMonth + ".txt";
                 FileOutputStream outFs = openFileOutput(fname, Context.MODE_PRIVATE);
-                String str = "쿡북 안드로이드";
-                outFs.write(str.getBytes());
+//                String str = "쿡북 안드로이드";
+                String cont = edtDiary.getText().toString();
+                outFs.write(cont.getBytes());
                 outFs.close();
-                Toast.makeText(getApplicationContext(),"file.txt가 생성됨", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),fname + "가 생성됨", Toast.LENGTH_SHORT).show();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -71,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void fileRead(String filename) {
         try {
+            Log.d("alert", filename);
             edtDiary.setText("");
             FileInputStream inFs = openFileInput(filename);
             byte[] txt = new byte[30];
@@ -80,7 +89,8 @@ public class MainActivity extends AppCompatActivity {
             edtDiary.setText(str);
             inFs.close();
         } catch(IOException e) {
-            Toast.makeText(getApplicationContext(), "파일없음", Toast.LENGTH_SHORT).show();
+            edtDiary.setText("파일없음");
+//            Toast.makeText(getApplicationContext(), "파일없음", Toast.LENGTH_SHORT).show();
         }
     }
 }
