@@ -23,7 +23,7 @@
         android:layout_marginTop="16dp"
         android:background="#CDDC39"
         android:text="TextView"
-        android:textSize="16sp"
+        android:textSize="25sp"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 

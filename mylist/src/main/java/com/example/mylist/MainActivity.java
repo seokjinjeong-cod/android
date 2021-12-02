@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
         MyAdapter adapter = new MyAdapter(list);
         lv.setAdapter(adapter);
+
         lv.setOnItemClickListener((adapterView, view, i, l) -> {
             Toast.makeText(getApplicationContext(), list.get(i).get("name"), Toast.LENGTH_SHORT).show();
         });
