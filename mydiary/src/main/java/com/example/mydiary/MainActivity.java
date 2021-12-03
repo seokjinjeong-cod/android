@@ -4,7 +4,9 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -25,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.READ_CALL_LOG,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE}, MODE_PRIVATE);
+
         Button btnWriteForm = findViewById(R.id.btnWriteForm);
         lv = findViewById(R.id.listDiary);
 
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             String id = list.get(i).get_id();
             String title = list.get(i).getTitle();
             String content = list.get(i).getContent();
+            String img = list.get(i).getImg();
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
             dialog.setTitle("확인")
                     .setPositiveButton("수정", (dialogInterface, i1) -> {
@@ -55,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                         intent.putExtra("title", title);
                         intent.putExtra("content", content);
                         intent.putExtra("id", id);
+                        intent.putExtra("img", img);
+                        System.out.println("0000000000000000000000000000000000" + img);
                         startActivityForResult(intent,0);
                         dao.update(dbHelper, vo);
                     })
@@ -77,18 +86,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode == 1) {
+        System.out.println("111111111111111111111111111111111");
+        if(resultCode == RESULT_OK) {
+            System.out.println("222222222222222222222222222");
             DBHelper dbHelper = new DBHelper(getApplicationContext());
             ArrayList<DiaryVO> list = DiaryDAO.selectAll(dbHelper);
 
             lv.setAdapter(new MyAdapter(list));
-            Toast.makeText(getApplicationContext(),"등록완료!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"완료!", Toast.LENGTH_LONG).show();
         } else {
-            DBHelper dbHelper = new DBHelper(getApplicationContext());
-            ArrayList<DiaryVO> list = DiaryDAO.selectAll(dbHelper);
-
-            lv.setAdapter(new MyAdapter(list));
-            Toast.makeText(getApplicationContext(),"수정완료!", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"취소!", Toast.LENGTH_LONG).show();
         }
     }
 }

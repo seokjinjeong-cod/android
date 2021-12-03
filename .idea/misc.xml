@@ -10,7 +10,7 @@
         <entry key="..\:/Dev/androidWork/mydialog/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Dev/androidWork/mydiary/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="..\:/Dev/androidWork/mydiary/src/main/res/layout/activity_view.xml" value="0.19166666666666668" />
-        <entry key="..\:/Dev/androidWork/mydiary/src/main/res/layout/activity_write.xml" value="0.19166666666666668" />
+        <entry key="..\:/Dev/androidWork/mydiary/src/main/res/layout/activity_write.xml" value="0.33" />
         <entry key="..\:/Dev/androidWork/mydiary/src/main/res/layout/listview_item.xml" value="0.36614583333333334" />
         <entry key="..\:/Dev/androidWork/myfile/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Dev/androidWork/myhttp/src/main/res/layout/activity_insert.xml" value="0.36614583333333334" />
@@ -23,12 +23,11 @@
         <entry key="..\:/Dev/androidWork/mymemo/src/main/res/layout/activity_insert.xml" value="0.33" />
         <entry key="..\:/Dev/androidWork/mymemo/src/main/res/layout/activity_list.xml" value="0.23541666666666666" />
         <entry key="..\:/Dev/androidWork/mymemo/src/main/res/layout/activity_main.xml" value="0.25885416666666666" />
+        <entry key="..\:/Dev/androidWork/mynavigationdrawer/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
         <entry key="..\:/Dev/androidWork/mypet/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Dev/androidWork/myprovider/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
         <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/active_calc.xml" value="0.33" />
         <entry key="..\:/Dev/androidWork/mywidget/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/tjrwl/StudioProjects/android/mylist/src/main/res/layout/activity_main.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/tjrwl/StudioProjects/android/mylist/src/main/res/layout/activity_recycle.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/tjrwl/StudioProjects/android/mylist/src/main/res/layout/list_item.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>

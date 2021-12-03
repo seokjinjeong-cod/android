@@ -20,7 +20,7 @@ public class DiaryDAO {
         ArrayList<DiaryVO> list = new ArrayList<DiaryVO>();
 
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        String sql = "select _id, title, content, time from diary order by _id desc";
+        String sql = "select _id, title, content, time, img from diary order by _id desc";
         Cursor cursor = db.rawQuery(sql, null);
         while (cursor.moveToNext()) {
             DiaryVO vo = new DiaryVO();
@@ -28,6 +28,7 @@ public class DiaryDAO {
             vo.setTitle(cursor.getString(1));
             vo.setContent(cursor.getString(2));
             vo.setTime(cursor.getString(3));
+            vo.setImg(cursor.getString(4));
             list.add(vo);
         }
         db.close();
@@ -42,6 +43,9 @@ public class DiaryDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put("title", vo.getTitle());
         contentValues.put("content", vo.getContent());
+        if(vo.getImg() != null) {
+            contentValues.put("img", vo.getImg());
+        }
 
         //현재시간 설정
         LocalDate dt = LocalDate.now();
@@ -73,6 +77,7 @@ public class DiaryDAO {
         ContentValues contentValues = new ContentValues();
         contentValues.put("title", vo.getTitle());
         contentValues.put("content", vo.getContent());
+        contentValues.put("img", vo.getImg());
 
         //현재시간 설정
         LocalDate dt = LocalDate.now();

@@ -12,7 +12,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mylayout/My_First.mylayout.iml" filepath="$PROJECT_DIR$/.idea/modules/mylayout/My_First.mylayout.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mylist/My_First.mylist.iml" filepath="$PROJECT_DIR$/.idea/modules/mylist/My_First.mylist.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mymemo/My_First.mymemo.iml" filepath="$PROJECT_DIR$/.idea/modules/mymemo/My_First.mymemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mynavigationdrawer/My_First.mynavigationdrawer.iml" filepath="$PROJECT_DIR$/.idea/modules/mynavigationdrawer/My_First.mynavigationdrawer.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mypet/My_First.mypet.iml" filepath="$PROJECT_DIR$/.idea/modules/mypet/My_First.mypet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myprovider/My_First.myprovider.iml" filepath="$PROJECT_DIR$/.idea/modules/myprovider/My_First.myprovider.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mywidget/My_First.mywidget.iml" filepath="$PROJECT_DIR$/.idea/modules/mywidget/My_First.mywidget.iml" />
     </modules>
   </component>
