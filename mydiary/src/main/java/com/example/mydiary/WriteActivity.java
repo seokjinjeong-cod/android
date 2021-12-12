@@ -47,8 +47,6 @@ public class WriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
 
-
-
         EditText editTitle = findViewById(R.id.editTitle);
         EditText editContent = findViewById(R.id.editContent);
         Button btnSave = findViewById(R.id.btnSave);
@@ -60,57 +58,58 @@ public class WriteActivity extends AppCompatActivity {
             getPhoto();
         });
 
+        dispatchTakePictureIntent();
+
         btnImage.setOnClickListener(v -> {
-            dispatchTakePictureIntent();
-        });
 
-        Intent intent = getIntent();
-        if(intent.getExtras() != null) {
-            String eTitle = intent.getExtras().getString("title");
-            String eContent = intent.getExtras().getString("content");
-            editTitle.setText(eTitle);
-            id = intent.getExtras().getString("id");
-            editContent.setText(eContent);
-            if (intent.getExtras().getString("img") != null) {
-                currentPhotoPath = intent.getExtras().getString("img");
-                System.out.println("==================================" + currentPhotoPath);
-                imageDiary.setImageURI(Uri.parse(currentPhotoPath));
-            }
-        }
-
-        dbHelper = new DBHelper(getApplicationContext());
-
-        btnSave.setOnClickListener(v -> {
-            DiaryVO diary = new DiaryVO();
-            String title = editTitle.getText().toString();
-            String content = editContent.getText().toString();
-            if(id.equals("")) {
-                diary.setTitle(title);
-                diary.setContent(content);
-                diary.setImg(currentPhotoPath);
-                Log.d("alert", "등록등록등록등록등록등록등록등록등록등록등록");
-                dao.insert(dbHelper, diary);
-                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-                setResult(RESULT_OK, intent1);
-            } else {
-                diary.set_id(id);
-                diary.setTitle(title);
-                diary.setContent(content);
-                if (currentPhotoPath != null) {
-                    if(selectionImg != null) {
-                        System.out.println("selectionImg = " + String.valueOf(selectionImg));
-                        diary.setImg(String.valueOf(selectionImg));
-                    } else {
-                        diary.setImg(currentPhotoPath);
-                    }
+            Intent intent = getIntent();
+            if (intent.getExtras() != null) {
+                String eTitle = intent.getExtras().getString("title");
+                String eContent = intent.getExtras().getString("content");
+                editTitle.setText(eTitle);
+                id = intent.getExtras().getString("id");
+                editContent.setText(eContent);
+                if (intent.getExtras().getString("img") != null) {
+                    currentPhotoPath = intent.getExtras().getString("img");
+                    System.out.println("==================================" + currentPhotoPath);
+                    imageDiary.setImageURI(Uri.parse(currentPhotoPath));
                 }
-                Log.d("alert", "수정수정수정수정수정수정수정수정수정수정수정");
-                dao.update(dbHelper, diary);
-                Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
-
-                setResult(RESULT_OK, intent1);
             }
-            finish();
+
+            dbHelper = new DBHelper(getApplicationContext());
+
+            btnSave.setOnClickListener(v -> {
+                DiaryVO diary = new DiaryVO();
+                String title = editTitle.getText().toString();
+                String content = editContent.getText().toString();
+                if (id.equals("")) {
+                    diary.setTitle(title);
+                    diary.setContent(content);
+                    diary.setImg(currentPhotoPath);
+                    Log.d("alert", "등록등록등록등록등록등록등록등록등록등록등록");
+                    dao.insert(dbHelper, diary);
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+                    setResult(RESULT_OK, intent1);
+                } else {
+                    diary.set_id(id);
+                    diary.setTitle(title);
+                    diary.setContent(content);
+                    if (currentPhotoPath != null) {
+                        if (selectionImg != null) {
+                            System.out.println("selectionImg = " + String.valueOf(selectionImg));
+                            diary.setImg(String.valueOf(selectionImg));
+                        } else {
+                            diary.setImg(currentPhotoPath);
+                        }
+                    }
+                    Log.d("alert", "수정수정수정수정수정수정수정수정수정수정수정");
+                    dao.update(dbHelper, diary);
+                    Intent intent1 = new Intent(getApplicationContext(), MainActivity.class);
+
+                    setResult(RESULT_OK, intent1);
+                }
+                finish();
+            });
         });
     }
 
@@ -156,7 +155,7 @@ public class WriteActivity extends AppCompatActivity {
             startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
         }
     }
-
+0
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
